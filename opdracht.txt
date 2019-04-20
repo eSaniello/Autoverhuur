@@ -1,0 +1,31 @@
+Maak een database met de gegevens van alle voertuigen van het verhuurbedrijf RS. 
+RS is verhuurbedrijf welke haar voertuigen aan verschillende individuen en aan bekende en grote 
+bedrijven in Suriname verhuurd. Van elke voertuig wordt de kilometerstand bijgehouden. 
+Met het tarief per km wordt dan de huurprijs uitgerekend. Ga na welke tabellen en velden er 
+moeten worden opgenomen in de database. 
+
+Maak vervolgens schermen voor:
+9april:
+-het registreren van voertuigen
+-het registreren van klanten (eventueel bedrijven)
+-het wijzigen van voertuigen (bijv. kmstand)
+-het verwijderen van voertuigen
+--16april:
+- het opzoeken van voertuigen op een uniek veld
+- het opzoeken van klanten op uniek veld
+- het weergeven van een overzicht van de voertuigen die door een bepaald bedrijf zijn gehuurd
+
+
+De voertuigen komen uit verschillende categorieen. De categorie wordt door de overheid bepaald. 
+Voor elke categorie is de huurtarief verschillend.
+De boete en de borgsom verschilt ook per categorie. 
+Indien bij terugkomst er schade is aan de auto wordt de borgsom volledig of gedeeltelijk ingehouden.
+Dit bedrag wordt door de eigenaar van het verhuurbedrijf bepaalt. 
+Indien de borgsom niet voldoende is om de schade te dekken wordt er ook nog een boete opgelegd.
+Bij het verhuren van de autos moeten de huurders een overeenkomst ondertekenen met het verhuurbedrijf. 
+Dit overeenkomst haalt de info van de klant n het verhuurbedrijf automatisch uit het systeem en 
+maakt een doc op.
+En wordt vervolgens afgedrukt en wordt daarna ondertekend door beide partijen.
+
+Breng aanpassingen in het bestaande systeem zodanig dat de registratie van borgsom en boete kan plaatsvinden.
+Breng aanpassingen, uitbreidingen in het systeem zodanig dat het overeenkomst afgedrukt kan worden.
