@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2019 at 05:04 PM
+-- Generation Time: May 14, 2019 at 03:03 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -47,7 +47,10 @@ INSERT INTO `auto` (`auto_id`, `merk`, `kenteken_nummer`, `chassis_nummer`, `bou
 (1, '4ed5rft6gyCR7TY78U', '5678', 678, 5678, 5678, 5678, '5678'),
 (2, '45678', '5678', 5678, 5678, 56789, 567, 'P2'),
 (3, '4567', '5678', 5678, 56, 5678, 567, 'P4'),
-(4, 'Axio', '66-44-PJ', 2147483647, 2011, 2147483647, 5, 'P2');
+(4, 'Axio', '66-44-PJ', 2147483647, 2011, 2147483647, 5, 'P2'),
+(5, 'rcvtbhnj', 'drtfyu', 0, 567, 5, 56789, 'P2'),
+(6, '4567', 'ty', 0, 678, 67, 8567, 'P2'),
+(7, '745678', 'grtfgyu', 0, 976, 67, 67, 'P2');
 
 -- --------------------------------------------------------
 
@@ -83,7 +86,8 @@ INSERT INTO `klant` (`klant_id`, `naam`, `adres`, `mobiel`) VALUES
 CREATE TABLE `tarief` (
   `tarief_id` int(11) NOT NULL,
   `categorie` varchar(255) NOT NULL,
-  `tarief` int(11) NOT NULL
+  `tarief` int(11) NOT NULL,
+  `borg` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -99,6 +103,8 @@ CREATE TABLE `verhuur` (
   `oud_km_stand` int(11) NOT NULL,
   `nieuw_km_stand` int(11) NOT NULL,
   `tarief` double NOT NULL,
+  `borg` double NOT NULL,
+  `boete` double NOT NULL,
   `uitgeef_datum` date NOT NULL,
   `inlever_datum` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -141,7 +147,7 @@ ALTER TABLE `verhuur`
 -- AUTO_INCREMENT for table `auto`
 --
 ALTER TABLE `auto`
-  MODIFY `auto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `auto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `klant`
