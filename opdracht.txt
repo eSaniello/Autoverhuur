@@ -29,3 +29,17 @@ En wordt vervolgens afgedrukt en wordt daarna ondertekend door beide partijen.
 
 Breng aanpassingen in het bestaande systeem zodanig dat de registratie van borgsom en boete kan plaatsvinden.
 Breng aanpassingen, uitbreidingen in het systeem zodanig dat het overeenkomst afgedrukt kan worden.
+
+
+#################################################################################################################
+Verhuren van auto:
+1 Verhuur knop
+2 Auto kiezen (dropdown) indien niet beschikbaar routen naar voertuigen registratie.
+3 Klant kiezen (dropdown) indien niet beschikbaar routen naar klanten registratie.
+4 overeenkomst
+5 Auto markeren als verhuurd.
+
+Dashboard
+1 zoeken van voertuigen en klanten.
+2 een overzicht van de voertuigen die door een bepaald bedrijf zijn gehuurd.
+3 wijzigen en verwijderen van voertuigen.

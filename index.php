@@ -7,6 +7,9 @@
     <link type="text/css" rel="stylesheet" href="lib/materialize/css/materialize.min.css" media="screen,projection" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Materialize stepper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/materialize-stepper@3.0.1/dist/css/mstepper.min.css">
 </head>
 
 <body class="red lighten-5">
@@ -36,7 +39,7 @@
 
             </div>
             <div id="dashboard" class="col s12">
-                <button class="btn waves-effect blue" onclick = "hah()">Verhuur een auto!</button>
+                <button class="btn waves-effect blue" onclick ="hah()">Verhuur een auto!</button>
 
                 <blockquote>
                     <p class="flow-text">Geregistreerde voertuigen</p>
@@ -120,6 +123,92 @@
                 <blockquote>
                     <p class="flow-text">Verhuur een nieuwe voertuig</p>
                 </blockquote>
+
+                <ul class="stepper horizontal" style="min-height:820px">
+                    <li class="step active">
+                        <div data-step-label="Ik ben een label" class="step-title waves-effect">E-mail</div>
+                        <div class="step-content">
+                            <!-- Your step content goes here (like inputs or so) -->
+                            <form class="col s12" id="auto_form">
+                                <div class="row">
+                                    <div class="input-field col s10">
+                                        <i class="material-icons prefix">directions_car</i>
+                                        <input id="merk" type="text" class="validate" name="merk" required>
+                                        <label for="merk">Merk</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s10">
+                                        <i class="material-icons prefix">tab</i>
+                                        <input id="Kenteken_nr" type="text" class="validate" name="kenteken_nummer" required>
+                                        <label for="Kenteken_nr">Kenteken nr.</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s10">
+                                        <i class="material-icons prefix">toys</i>
+                                        <input id="chassis_nr" type="text" class="validate" name="chassis_nummer" required>
+                                        <label for="chassis_nr">Chassis nr.</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s10">
+                                        <i class="material-icons prefix">date_range</i>
+                                        <input id="bouwjaar" type="number" class="validate" name="bouwjaar" required>
+                                        <label for="bouwjaar">Bouwjaar</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s10">
+                                        <i class="material-icons prefix">bookmark_border</i>
+                                        <input id="km_stand" type="number" class="validate" name="km_stand" required>
+                                        <label for="km_stand">KM Stand</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s10">
+                                        <i class="material-icons prefix">attach_money</i>
+                                        <input id="tarief_per_km" type="number" class="validate" name="tarief_per_km" required>
+                                        <label for="tarief_per_km">Tarief per KM</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s10">
+                                        <i class="material-icons prefix">category</i>
+                                        <select name="categorie" required>
+                                            <option value="P1">P1</option>
+                                            <option value="P2" selected>P2</option>
+                                            <option value="P3">P3</option>
+                                            <option value="P4">P4</option>
+                                        </select>
+                                        <label for="categorie">Categorie</label>
+                                    </div>
+                                </div>
+                                <!-- <div class="row">
+                                    <button class="btn waves-effect col s10" type="button" name="registreer_auto">Registreer
+                                        <i class="material-icons right">send</i>
+                                    </button>
+                                </div> -->
+                            </form>
+                            <div class="step-actions">
+                                <!-- Here goes your actions buttons -->
+                                <button class="waves-effect btn next-step" data-feedback="someFunction">CONTINUE</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="step">
+                        <div class="step-title waves-effect">Phone</div>
+                        <div class="step-content">
+                            <!-- Your step content goes here (like inputs or so) -->
+                            blablabla
+                            <div class="step-actions">
+                                <!-- Here goes your actions buttons -->
+                                <button class="waves-effect btn next-step">CONTINUE</button>
+                                <button class="waves-effect btn-flat previous-step">BACK</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
 
             <div id="klanten" class="col s12">
@@ -162,7 +251,7 @@
                     <p class="flow-text">Registreer een nieuwe voertuig</p>
                 </blockquote>
 
-                <form class="col s12" action="src/auto.php" method="POST">
+                <!-- <form class="col s12" action="src/auto.php" method="POST">
                     <div class="row">
                         <div class="input-field col s10">
                             <i class="material-icons prefix">directions_car</i>
@@ -222,7 +311,7 @@
                             <i class="material-icons right">send</i>
                         </button>
                     </div>
-                </form>
+                </form> -->
 
             </div>
         </div>
@@ -230,6 +319,14 @@
 
 
     <script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+    <!--Materialize stepper JS -->
+    <script src="https://unpkg.com/materialize-stepper@3.0.1/dist/js/mstepper.min.js"></script>
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
 
     <script type="text/javascript">
         M.AutoInit();
@@ -240,6 +337,38 @@
 
         function hah(){
             instance.select('verhuur');
+        }
+
+        var stepper = document.querySelector('.stepper');
+        var stepperInstace = new MStepper(stepper, {
+            // options
+            firstActive: 0, // this is the default
+            autoFocusInput: false,
+            showFeedbackPreloader: true,
+            stepTitleNavigation: false,
+        });
+
+        function someFunction(destroyFeedback) {
+            // Do your stuff here
+            // Call destroyFeedback() function when you're done
+            // The true parameter will proceed to the next step besides destroying the preloader
+
+            // AJAX Code To Submit Form.
+            $.ajax({
+                type: "POST",
+                url: "./src/auto_ajax.php",
+                data: $("#auto_form").serialize(),
+                dataType: "text",
+                cache: true,
+                success: () => {
+                    destroyFeedback(true);
+                }
+            });
+
+
+            // setTimeout(() => {
+            //     destroyFeedback(true);
+            // }, 5000);
         }
     </script>
 </body>
