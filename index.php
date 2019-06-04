@@ -47,7 +47,7 @@
                     <p class="flow-text">Uitgeleende voertuigen</p>
                 </blockquote>
 
-                <div style="height: 25em; overflow:auto;">
+                <div style="height: 20em; overflow:auto;">
                     <table class="highlight">
                         <thead>
                             <tr>
